@@ -1,4 +1,9 @@
 import { ReactNode } from "react";
+
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import WindowIcon from "@mui/icons-material/Window";
 import {
   Avatar,
   Box,
@@ -12,10 +17,6 @@ import {
   ListItemText,
   useTheme,
 } from "@mui/material";
-import WindowIcon from "@mui/icons-material/Window";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
 
 import logo from "../assets/logo.svg";
 
@@ -23,7 +24,7 @@ interface IChildren {
   children: ReactNode;
 }
 
-export default function Sidebar() {
+export const Sidebar: React.FC<IChildren> = ({children}) => {
   const theme = useTheme();
 
   return (
@@ -174,6 +175,9 @@ export default function Sidebar() {
           )}
         </Box>
       </Drawer>
+      <Box>
+        {children}
+      </Box>
     </>
   );
 }
