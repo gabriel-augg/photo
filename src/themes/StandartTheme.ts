@@ -18,6 +18,10 @@ export const StandartTheme = createTheme({
             paper: "#272727"
         }
     },
-    
+    typography: {
+        allVariants: {
+          color: 'white'
+        }
+      }
 
 })
