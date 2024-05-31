@@ -1,30 +1,59 @@
-# React + TypeScript + Vite
+# <img src="./public/icon.svg" width="28" alt="icon">  Photo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Photo é uma rede social que nasceu com o objetivo de ser de fácil acesso, gratuita e segura. Tudo isso para manter suas fotos seguras e expostas ao mundo.
 
-Currently, two official plugins are available:
+## 🎨 **Layout**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### EM DESENVOLVIMENTO
 
-## Expanding the ESLint configuration
+## API do projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Cique [aqui](https://github.com/gabriel-augg/photo-api) para saber mais informações sobre a API do projeto.
 
-- Configure the top-level `parserOptions` property like this:
+## 💻 Tecnologias
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- TypeScript
+- React
+- MUI
+- Redux
+- Redux persist
+- Firebase
+- Axios
+- MUI Icons
+- React-hook-form
+- Zod
+
+## 🚀 Getting started
+
+Para rodar a aplicação localmente, é necessério fazer clone do projeto e instalar todas as suas dependências.
+
+### Requisitos
+
+- Git
+- Node
+- Npm
+
+### Clonando o repositório e instalando as dependências
+
+Para clonar o repositório, execute o seguinte comando na pasta de desejo:
+
+```bash
+git clone https://github.com/gabriel-augg/photo
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Apos clonar o repositório, para instalar as dependências, execute os seguintes comandos:
+
+
+```bash
+cd photo
+npm install
+```
+
+
+## Iniciando o projeto
+
+Após a instalação de todas as dependência, execute o seguinte comando no terminal:
+
+```bash
+npm run dev
+```
