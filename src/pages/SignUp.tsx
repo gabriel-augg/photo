@@ -11,7 +11,7 @@ import {
 import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
 
-export const SignIn: React.FC = () => {
+export const SignUp: React.FC = () => {
   const theme = useTheme();
 
   return (
@@ -78,7 +78,7 @@ export const SignIn: React.FC = () => {
           sx={{
             justifyContent: "flex-start",
             fontSize: "1.1em",
-            paddingY: "0.6em",
+            paddingY: "0.5em",
             marginBottom: 1.5,
           }}
         >
@@ -107,7 +107,7 @@ export const SignIn: React.FC = () => {
             paddingY: 1,
             justifyContent: "inherit",
             gap: 2,
-            marginBottom: 1
+            marginBottom: 1,
           }}
           startIcon={<GoogleIcon fontSize="large" sx={{ color: "black" }} />}
         >
