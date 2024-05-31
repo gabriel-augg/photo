@@ -15,21 +15,25 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  useMediaQuery,
   useTheme,
 } from "@mui/material";
 
 import logo from "../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 interface IChildren {
   children: ReactNode;
 }
 
 export const Sidebar: React.FC<IChildren> = ({children}) => {
+  const navigate = useNavigate()
   const theme = useTheme();
+  const mdDown = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <>
-      <Drawer variant="permanent">
+      <Drawer variant={mdDown ? "temporary" : "permanent"}>
         <Box
           width={theme.spacing(28)}
           height="100%"
@@ -126,11 +130,12 @@ export const Sidebar: React.FC<IChildren> = ({children}) => {
               </ListItemButton>
             </List>
           </Box>
-          {true && (
+          {false && (
             <Box display="flex" flexDirection="column" paddingX={2} gap={2}>
               <Button
                 color="secondary"
                 variant="contained"
+                onClick={() => navigate('/signup')}
                 sx={{
                   justifyContent: "flex-start",
                 }}
@@ -140,6 +145,7 @@ export const Sidebar: React.FC<IChildren> = ({children}) => {
               <Button
                 color="secondary"
                 variant="outlined"
+                onClick={() => navigate('/signin')}
                 sx={{
                   justifyContent: "flex-start",
                 }}
@@ -149,7 +155,7 @@ export const Sidebar: React.FC<IChildren> = ({children}) => {
             </Box>
           )}
 
-          {false && (
+          {true && (
             <Box>
               <List component="nav">
                 <ListItemButton>
@@ -175,7 +181,7 @@ export const Sidebar: React.FC<IChildren> = ({children}) => {
           )}
         </Box>
       </Drawer>
-      <Box height="100vh" marginLeft={theme.spacing(28)}>
+      <Box height="100vh" marginLeft={ mdDown ? 0 : theme.spacing(28)}>
         {children}
       </Box>
     </>

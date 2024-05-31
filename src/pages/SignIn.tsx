@@ -1,20 +1,22 @@
 import {
-    Box,
-    Button,
-    Container,
-    Divider,
-    TextField,
-    Typography,
-    useTheme,
-  } from "@mui/material";
-  
-  import GoogleIcon from "@mui/icons-material/Google";
-  import AppleIcon from "@mui/icons-material/Apple";
-  
-  export const SignIn: React.FC = () => {
-    const theme = useTheme();
-  
-    return (
+  Box,
+  Button,
+  Container,
+  Divider,
+  TextField,
+  Typography,
+  useTheme,
+} from "@mui/material";
+
+import GoogleIcon from "@mui/icons-material/Google";
+import AppleIcon from "@mui/icons-material/Apple";
+import { PageLayout } from "../layouts";
+
+export const SignIn: React.FC = () => {
+  const theme = useTheme();
+
+  return (
+    <PageLayout>
       <Container
         component="section"
         maxWidth="xs"
@@ -29,7 +31,7 @@ import {
           <Typography variant="h6" color="primary" component="h1">
             Sign In
           </Typography>
-  
+
           <Typography
             fontWeight="normal"
             color="primary"
@@ -39,7 +41,7 @@ import {
           >
             Welcome back to Photo.
           </Typography>
-  
+
           <TextField
             label="Email or username"
             fullWidth
@@ -47,8 +49,7 @@ import {
               marginBottom: 2,
             }}
           />
-  
-  
+
           <TextField
             label="Password"
             fullWidth
@@ -56,7 +57,7 @@ import {
               marginBottom: 2,
             }}
           />
-  
+
           <Button
             variant="contained"
             fullWidth
@@ -69,7 +70,7 @@ import {
           >
             SIGN IN
           </Button>
-  
+
           <Box display="flex" alignItems="center" gap={1} marginBottom={1.5}>
             <Typography color="primary">Already have an account?</Typography>
             <Button
@@ -78,12 +79,12 @@ import {
                 paddingY: 0.3,
               }}
             >
-              Sign In
+              Sign Up
             </Button>
           </Box>
-  
+
           <Divider sx={{ bgcolor: "black", mb: 2 }} />
-  
+
           <Button
             fullWidth
             variant="outlined"
@@ -113,6 +114,6 @@ import {
           </Button>
         </Box>
       </Container>
-    );
-  };
-  
+    </PageLayout>
+  );
+};
