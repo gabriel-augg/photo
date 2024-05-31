@@ -175,7 +175,7 @@ export const Sidebar: React.FC<IChildren> = ({children}) => {
           )}
         </Box>
       </Drawer>
-      <Box>
+      <Box height="100vh" marginLeft={theme.spacing(28)}>
         {children}
       </Box>
     </>
