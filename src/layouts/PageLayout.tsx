@@ -1,11 +1,8 @@
 import {
   AppBar,
   Box,
-  Icon,
   IconButton,
-  Paper,
   Toolbar,
-  Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
